@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="SurgCast: Action-Conditioned Future Skeletons for Controllable Surgical World Models">
+  <meta name="description" content="SurgCast predicts future instrument skeletons from robot actions and uses them to control surgical video generation.">
+  <meta name="keywords" content="surgical world models, robot actions, instrument skeletons, controllable video generation, surgical robotics">
+  <meta name="author" content="Anonymous Authors">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SurgCast Project Page">
+  <meta property="og:title" content="SurgCast: Action-Conditioned Future Skeletons for Controllable Surgical World Models">
+  <meta property="og:description" content="SurgCast predicts future instrument skeletons from robot actions and uses them to control surgical video generation.">
+  <meta property="og:url" content="https://wanhao-liu.github.io/Surgcast/">
+  <meta property="og:image" content="https://wanhao-liu.github.io/Surgcast/static/images/teaser.png">
+  <meta property="og:image:alt" content="Overview of the SurgCast surgical world model">
+  <meta property="article:published_time" content="2026-09-01T00:00:00.000Z">
+  <meta property="article:author" content="Anonymous Authors">
+  <meta property="article:section" content="Research">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SurgCast: Action-Conditioned Future Skeletons for Controllable Surgical World Models">
+  <meta name="twitter:description" content="SurgCast predicts future instrument skeletons from robot actions and uses them to control surgical video generation.">
+  <meta name="twitter:image" content="https://wanhao-liu.github.io/Surgcast/static/images/teaser.png">
+  <meta name="twitter:image:alt" content="Overview of the SurgCast surgical world model">
+
+  <meta name="citation_title" content="SurgCast: Action-Conditioned Future Skeletons for Controllable Surgical World Models">
+  <meta name="citation_author" content="Anonymous Authors">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_pdf_url" content="https://wanhao-liu.github.io/Surgcast/static/pdfs/SurgCast.pdf">
+
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>SurgCast Project Page</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🦴</text></svg>">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "SurgCast: Action-Conditioned Future Skeletons for Controllable Surgical World Models",
+    "description": "SurgCast predicts future instrument skeletons from robot actions and uses them to control surgical video generation.",
+    "author": [{"@type": "Person", "name": "Anonymous Authors"}],
+    "datePublished": "2026-09-01",
+    "url": "https://wanhao-liu.github.io/Surgcast/",
+    "image": "https://wanhao-liu.github.io/Surgcast/static/images/teaser.png",
+    "keywords": ["surgical world models", "robot actions", "instrument skeletons", "controllable video generation"],
+    "isAccessibleForFree": true,
+    "mainEntity": {"@type": "WebPage", "@id": "https://wanhao-liu.github.io/Surgcast/"}
+  }
+  </script>
+</head>
+<body>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View SurgCast model variants">
+      <i class="fas fa-flask"></i>
+      SurgCast Model Variants
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>SurgCast Model Variants</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()" aria-label="Close model variants">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="works-list">
+        <div class="work-item">
+          <div class="work-info">
+            <h5>Predicted-Skeleton Teacher</h5>
+            <p>Full-sequence generation conditioned on action-predicted future instrument skeletons.</p>
+            <span class="work-venue">SurgCast</span>
+          </div>
+        </div>
+        <div class="work-item">
+          <div class="work-info">
+            <h5>Oracle Reference</h5>
+            <p>Ground-truth future skeleton conditioning used for controlled analysis and upper-bound comparison.</p>
+            <span class="work-venue">SurgCast</span>
+          </div>
+        </div>
+        <div class="work-item">
+          <div class="work-info">
+            <h5>Four-Step Causal Student</h5>
+            <p>A structurally conditioned autoregressive student distilled from the teacher.</p>
+            <span class="work-venue">SurgCast</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">SurgCast: Action-Conditioned Future Skeletons for Controllable Surgical World Models</h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block author-nus">Anonymous Authors</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="static/pdfs/SurgCast.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container">
+        <div class="hero-body has-text-centered" style="padding-top:1rem; padding-bottom:1rem;">
+          <img src="static/images/teaser.png" alt="SurgCast teaser" style="width:100%; max-width:none; height:auto; border-radius:0;">
+          <h2 class="subtitle has-text-centered">SurgCast predicts future instrument skeletons from robot actions to guide surgical video generation.</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Updates</h2>
+            <div class="content has-text-left">
+              <ul>
+                <li><strong>[2026-09]</strong> The <strong>SurgCast</strong> project page is available.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>Surgical world models must predict how instruments move in response to robot actions while preserving visual fidelity. Direct action conditioning leaves future articulated structure implicit. We introduce SurgCast, which predicts future instrument skeletons, represented by keypoint locations and visibility, from the current skeleton, robot state, and prospective actions, then uses them to control video generation. Dual-Path Semantic–Kinematic Injection applies multi-scale geometric residuals and global–local kinematic modulation alongside the original action pathway. Asymmetric distribution-matching distillation carries this structural interface into a four-step causal student. On SutureBot and SRTH-Porcine-Cholei, the predicted-skeleton teacher and causal student improve all seven reported visual-quality and instrument-control metrics over their respective direct-action baselines; the teacher reduces FVD by 37.6% and 67.3%, respectively. Ablations show that future actions improve skeleton prediction and that combining geometric and kinematic injection outperforms either path under matched oracle-skeleton conditioning. Zero-shot evaluation on Cao cautery combin and physical 6-DoF master-device demonstrations examine transfer and operator-driven generation. These results support action-predicted instrument structure as a shared control interface for full-sequence and causal surgical world models.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Qualitative Results</h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <img src="static/images/covered_tasks.png" alt="Qualitative comparison of SurgCast and baseline methods" style="width:100%; height:auto;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Overview of the SurgCast Pipeline</h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <img src="static/images/anno_pipeline.png" alt="Overview of the SurgCast pipeline" style="width:100%; height:auto;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@misc{surgcast2026,
+  title={SurgCast: Action-Conditioned Future Skeletons for Controllable Surgical World Models},
+  author={Anonymous Authors},
+  year={2026}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page, and follows the <a href="https://surgsigma.github.io/" target="_blank">Surg&Sigma;</a> project page. This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
