@@ -7,10 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const resetButton = document.getElementById('demo-reset');
   const caseLabel = document.getElementById('demo-case-label');
   const time = document.getElementById('demo-time');
-  const note = document.getElementById('demo-note');
   const error = document.getElementById('demo-error');
 
-  if (!video || !dataset || !caseSelect || !view || !playButton || !resetButton || !caseLabel || !time || !note || !error) return;
+  if (!video || !dataset || !caseSelect || !view || !playButton || !resetButton || !caseLabel || !time || !error) return;
 
   const cases = {
     suturebot: [
@@ -82,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const datasetName = dataset.options[dataset.selectedIndex].textContent;
     caseLabel.textContent = `${datasetName} · Episode ${selected.episode}`;
-    note.hidden = dataset.value !== 'suturebot';
     showError('');
     updatePlayButton();
     if (!preservePosition) time.textContent = `0.0 / ${(selected.frames / 6).toFixed(1)} s`;

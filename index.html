@@ -7,7 +7,7 @@
   <meta name="title" content="SurgCast: Action-Conditioned Future Skeletons for Controllable Surgical World Models">
   <meta name="description" content="SurgCast predicts future instrument skeletons from robot actions and uses them to control surgical video generation.">
   <meta name="keywords" content="surgical world models, robot actions, instrument skeletons, controllable video generation, surgical robotics">
-  <meta name="author" content="Anonymous Authors">
+  <meta name="author" content="Wanhao Liu, Rulin Zhou, Liangjing Shao, Zhaocheng Lin, Dongyue Li, Jingsong Lin, Zhiqing Tang, Jingchen, Panshuo Li, Hongliang Ren">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
 
@@ -19,7 +19,16 @@
   <meta property="og:image" content="https://wanhao-liu.github.io/Surgcast/static/images/teaser.png">
   <meta property="og:image:alt" content="Overview of the SurgCast surgical world model">
   <meta property="article:published_time" content="2026-09-01T00:00:00.000Z">
-  <meta property="article:author" content="Anonymous Authors">
+  <meta property="article:author" content="Wanhao Liu">
+  <meta property="article:author" content="Rulin Zhou">
+  <meta property="article:author" content="Liangjing Shao">
+  <meta property="article:author" content="Zhaocheng Lin">
+  <meta property="article:author" content="Dongyue Li">
+  <meta property="article:author" content="Jingsong Lin">
+  <meta property="article:author" content="Zhiqing Tang">
+  <meta property="article:author" content="Jingchen">
+  <meta property="article:author" content="Panshuo Li">
+  <meta property="article:author" content="Hongliang Ren">
   <meta property="article:section" content="Research">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -29,7 +38,16 @@
   <meta name="twitter:image:alt" content="Overview of the SurgCast surgical world model">
 
   <meta name="citation_title" content="SurgCast: Action-Conditioned Future Skeletons for Controllable Surgical World Models">
-  <meta name="citation_author" content="Anonymous Authors">
+  <meta name="citation_author" content="Wanhao Liu">
+  <meta name="citation_author" content="Rulin Zhou">
+  <meta name="citation_author" content="Liangjing Shao">
+  <meta name="citation_author" content="Zhaocheng Lin">
+  <meta name="citation_author" content="Dongyue Li">
+  <meta name="citation_author" content="Jingsong Lin">
+  <meta name="citation_author" content="Zhiqing Tang">
+  <meta name="citation_author" content="Jingchen">
+  <meta name="citation_author" content="Panshuo Li">
+  <meta name="citation_author" content="Hongliang Ren">
   <meta name="citation_publication_date" content="2026">
   <meta name="citation_pdf_url" content="https://wanhao-liu.github.io/Surgcast/static/pdfs/SurgCast.pdf">
 
@@ -73,7 +91,18 @@
     "@type": "ScholarlyArticle",
     "headline": "SurgCast: Action-Conditioned Future Skeletons for Controllable Surgical World Models",
     "description": "SurgCast predicts future instrument skeletons from robot actions and uses them to control surgical video generation.",
-    "author": [{"@type": "Person", "name": "Anonymous Authors"}],
+    "author": [
+      {"@type": "Person", "name": "Wanhao Liu"},
+      {"@type": "Person", "name": "Rulin Zhou"},
+      {"@type": "Person", "name": "Liangjing Shao"},
+      {"@type": "Person", "name": "Zhaocheng Lin"},
+      {"@type": "Person", "name": "Dongyue Li"},
+      {"@type": "Person", "name": "Jingsong Lin"},
+      {"@type": "Person", "name": "Zhiqing Tang"},
+      {"@type": "Person", "name": "Jingchen"},
+      {"@type": "Person", "name": "Panshuo Li"},
+      {"@type": "Person", "name": "Hongliang Ren"}
+    ],
     "datePublished": "2026-09-01",
     "url": "https://wanhao-liu.github.io/Surgcast/",
     "image": "https://wanhao-liu.github.io/Surgcast/static/images/teaser.png",
@@ -96,7 +125,22 @@
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">SurgCast: Action-Conditioned Future Skeletons for Controllable Surgical World Models</h1>
               <div class="is-size-5 publication-authors">
-                <span class="author-block author-nus">Anonymous Authors</span>
+                <span class="author-block author-gdut">Wanhao Liu<sup>1,3,*</sup></span>
+                <span class="author-block author-cuhk">Rulin Zhou<sup>2,*</sup></span>
+                <span class="author-block author-cuhk">Liangjing Shao<sup>2,*</sup></span>
+                <span class="author-block author-gdut">Zhaocheng Lin<sup>1</sup></span>
+                <span class="author-block author-gdut">Dongyue Li<sup>1</sup></span>
+                <span class="author-block author-cuhk">Jingsong Lin<sup>2</sup></span>
+                <span class="author-block author-cuhk">Zhiqing Tang<sup>2</sup></span>
+                <span class="author-block author-gdut">Jingchen<sup>1</sup></span>
+                <span class="author-block author-gdut">Panshuo Li<sup>1</sup></span>
+                <span class="author-block author-cuhk">Hongliang Ren<sup>2,3,&dagger;</sup></span>
+              </div>
+              <div class="is-size-6 publication-affiliations">
+                <span class="affiliation-item author-gdut"><span aria-hidden="true">&#x25B6;</span> <sup>1</sup> GDUT</span>
+                <span class="affiliation-item author-cuhk"><span aria-hidden="true">&#x25B6;</span> <sup>2</sup> CUHK</span>
+                <span class="affiliation-item author-hetao"><span aria-hidden="true">&#x25B6;</span> <sup>3</sup> SLAI</span>
+                <div class="author-notes"><sup>*</sup> These authors contributed equally. &nbsp;&nbsp; <sup>&dagger;</sup> Corresponding author.</div>
               </div>
 
               <div class="column has-text-centered">
@@ -160,8 +204,6 @@
             <button class="demo-button" id="demo-reset" type="button">Reset</button>
           </div>
         </div>
-        <p class="demo-caption">Six independent episodes across three datasets. Precomputed SurgCast full-sequence teacher rollouts conditioned on Oracle instrument skeletons; not live model inference. The overlaid skeleton comes from the episode annotations, not from the predictor.</p>
-        <p class="demo-note" id="demo-note">Near the end of these SutureBot cases, the right instrument leaves the field of view; its Oracle skeleton stops displaying when the labeled keypoints are no longer visible.</p>
         <p class="demo-error" id="demo-error" role="status" hidden></p>
       </div>
     </section>
@@ -216,7 +258,7 @@
         </div>
         <pre id="bibtex-code"><code>@misc{surgcast2026,
   title={SurgCast: Action-Conditioned Future Skeletons for Controllable Surgical World Models},
-  author={Anonymous Authors},
+  author={Wanhao Liu and Rulin Zhou and Liangjing Shao and Zhaocheng Lin and Dongyue Li and Jingsong Lin and Zhiqing Tang and Jingchen and Panshuo Li and Hongliang Ren},
   year={2026}
 }</code></pre>
       </div>

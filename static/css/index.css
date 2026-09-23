@@ -148,7 +148,13 @@ body {
 .publication-authors {
     font-family: 'Inter', sans-serif !important;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    line-height: 2;
+    margin-bottom: 0.75rem;
+}
+
+.publication-affiliations {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 
 .publication-venue {
@@ -202,29 +208,32 @@ body {
 
 .author-block {
   display: inline-block;
-  margin-right: 1rem;  /* 增大作者间横向间距 */
+  margin: 0 0.5rem;
+  white-space: nowrap;
 }
 
 /* Author colors by affiliation */
-.author-nus {
-  color: #003D7C; /* NUS blue */
+.author-gdut {
+  color: #a52a2a;
 }
 
 .author-cuhk {
-  color: #5B0F8C; /* CUHK purple */
+  color: #5b0f8c;
 }
 
-.author-sjtu {
-  color: #A80000; /* SJTU red */
+.author-hetao {
+  color: #176b73;
 }
 
-.author-nvidia {
-  color: #76B900; /* NVIDIA green */
+.author-block sup {
+  margin-left: 0.1rem;
+  font-size: 0.65em;
+  vertical-align: super;
 }
 
 /* Ensure nested strong/sup inherit the same color */
-.author-nus strong,
-.author-nus sup {
+.author-gdut strong,
+.author-gdut sup {
   color: inherit;
 }
 
@@ -233,20 +242,22 @@ body {
   color: inherit;
 }
 
-.author-sjtu strong,
-.author-sjtu sup {
-  color: inherit;
-}
-
-.author-nvidia strong,
-.author-nvidia sup {
+.author-hetao strong,
+.author-hetao sup {
   color: inherit;
 }
 
 /* Spacing between affiliations */
 .affiliation-item {
   display: inline-block;
-  margin-right: 2rem;
+  margin: 0 0.7rem;
+  white-space: nowrap;
+}
+
+.author-notes {
+  margin-top: 0.25rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
 }
 
 .publication-banner img {
@@ -714,8 +725,6 @@ a:focus {
   outline-offset: 2px;
 }
 
-.demo-caption,
-.demo-note,
 .demo-error {
   margin-top: 10px;
   color: #666;
@@ -723,8 +732,6 @@ a:focus {
 }
 
 .demo-error { color: #a22; }
-.demo-note { margin-top: 4px; }
-.demo-note[hidden] { display: none; }
 
 @media (max-width: 800px) {
   .demo-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
