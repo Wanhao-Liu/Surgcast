@@ -65,6 +65,7 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
+  <script defer src="static/js/interactive-demo.js"></script>
 
   <script type="application/ld+json">
   {
@@ -86,45 +87,6 @@
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
-
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View SurgCast model variants">
-      <i class="fas fa-flask"></i>
-      SurgCast Model Variants
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>SurgCast Model Variants</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()" aria-label="Close model variants">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <div class="work-item">
-          <div class="work-info">
-            <h5>Predicted-Skeleton Teacher</h5>
-            <p>Full-sequence generation conditioned on action-predicted future instrument skeletons.</p>
-            <span class="work-venue">SurgCast</span>
-          </div>
-        </div>
-        <div class="work-item">
-          <div class="work-info">
-            <h5>Oracle Reference</h5>
-            <p>Ground-truth future skeleton conditioning used for controlled analysis and upper-bound comparison.</p>
-            <span class="work-venue">SurgCast</span>
-          </div>
-        </div>
-        <div class="work-item">
-          <div class="work-info">
-            <h5>Four-Step Causal Student</h5>
-            <p>A structurally conditioned autoregressive student distilled from the teacher.</p>
-            <span class="work-venue">SurgCast</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <main id="main-content">
     <section class="hero">
@@ -162,18 +124,45 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Updates</h2>
-            <div class="content has-text-left">
-              <ul>
-                <li><strong>[2026-09]</strong> The <strong>SurgCast</strong> project page is available.</li>
-              </ul>
-            </div>
+    <section class="section" id="interactive-demo" aria-labelledby="interactive-demo-title">
+      <div class="container demo-container">
+        <h2 class="title is-3" id="interactive-demo-title">Interactive Demo</h2>
+        <div class="demo-shell">
+          <div class="demo-stage">
+            <span class="demo-case" id="demo-case-label">SutureBot · Episode 001187</span>
+            <span class="demo-time" id="demo-time">0.0 / 12.2 s</span>
+            <video id="demo-video" playsinline preload="metadata" poster="static/videos/surgcast-oracle/suturebot_001187_initial.png" src="static/videos/surgcast-oracle/suturebot_001187.mp4" aria-label="Precomputed SurgCast Oracle-skeleton-conditioned video"></video>
+          </div>
+          <div class="demo-controls">
+            <label class="demo-field" for="demo-dataset">
+              <span>Dataset</span>
+              <select id="demo-dataset">
+                <option value="suturebot">SutureBot</option>
+                <option value="srth">SRTH-Porcine-Cholei</option>
+                <option value="cao">Cao cautery combin (zero-shot)</option>
+              </select>
+            </label>
+            <label class="demo-field" for="demo-case">
+              <span>Case</span>
+              <select id="demo-case">
+                <option value="suturebot_001187">Episode 001187</option>
+                <option value="suturebot_001244">Episode 001244</option>
+              </select>
+            </label>
+            <label class="demo-field" for="demo-view">
+              <span>View</span>
+              <select id="demo-view">
+                <option value="video">Generated video</option>
+                <option value="skeleton">Video + Oracle skeleton</option>
+              </select>
+            </label>
+            <button class="demo-button demo-button-primary" id="demo-play" type="button">Play</button>
+            <button class="demo-button" id="demo-reset" type="button">Reset</button>
           </div>
         </div>
+        <p class="demo-caption">Six independent episodes across three datasets. Precomputed SurgCast full-sequence teacher rollouts conditioned on Oracle instrument skeletons; not live model inference. The overlaid skeleton comes from the episode annotations, not from the predictor.</p>
+        <p class="demo-note" id="demo-note">Near the end of these SutureBot cases, the right instrument leaves the field of view; its Oracle skeleton stops displaying when the labeled keypoints are no longer visible.</p>
+        <p class="demo-error" id="demo-error" role="status" hidden></p>
       </div>
     </section>
 
