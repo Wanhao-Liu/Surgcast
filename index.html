@@ -159,14 +159,24 @@
       </div>
     </section>
 
-    <section class="hero teaser">
+    <section class="hero teaser" aria-label="SurgCast video overview">
       <div class="container">
-        <div class="hero-body has-text-centered" style="padding-top:1rem; padding-bottom:1rem;">
-          <video controls playsinline preload="metadata" poster="static/images/surgcast-overview-poster.png" aria-label="SurgCast video overview" style="display:block; width:100%; height:auto; margin-bottom:1.5rem; background:#0b1220;">
-            <source src="static/videos/overview/surgcast-overview.mp4" type="video/mp4">
+        <div class="hero-body has-text-centered" style="padding-top:1rem; padding-bottom:3rem;">
+          <video controls playsinline preload="metadata" poster="static/images/surgcast-overview-poster.png" aria-label="SurgCast video overview" style="display:block; width:100%; height:auto; background:#000;">
+            <source src="static/videos/overview/surgcast-overview.mp4?v=20260926-silent" type="video/mp4">
           </video>
-          <img src="static/images/teaser.png" alt="SurgCast teaser" style="width:100%; max-width:none; height:auto; border-radius:0;">
-          <h2 class="subtitle has-text-centered">SurgCast predicts future instrument skeletons from robot actions to guide surgical video generation.</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-light" id="overview" aria-labelledby="overview-title">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3" id="overview-title">Overview</h2>
+          <figure class="has-text-centered">
+            <img src="static/images/teaser.png" alt="SurgCast teaser" style="width:100%; max-width:none; height:auto; border-radius:0;">
+            <figcaption class="subtitle has-text-centered" style="margin-top:1rem;">SurgCast predicts future instrument skeletons from robot actions to guide surgical video generation.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
